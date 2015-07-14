@@ -2,8 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace蹇呴』鎸囧悜Dao鎺ュ彛 -->
 <mapper namespace="com.github.dormymo.ssmframework.dao.ITableDAO">
+	<cache readOnly="true" eviction="FIFO"></cache>
 
-	<select id="count" resultType="int">
+	<select id="count" resultType="int" useCache="true">
 		select count(*) from table
 	</select>
 	
